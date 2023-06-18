@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>batch 2 Lecture 56 JS Data Type Array Day-2 </title>
+
+    <style>
+
+    </style>
+
+    <script src="./js/script.js">
+
+    </script>
+</head>
+
+<body>
+
+    <!--em = emphasis tag = italic tag--->
+
+    <em class="myem"> </em>
+    <h1 id="h1"></h1>
+
+
+    <strong id="news2"></strong>
+    <p class="news2"></p>
+
+
+    <script>
+
+        // Array is a special kind of variable which can stored more than one value of diffent data types at a time.
+        // let x =[1,2,4,"anil",[],{},true ]
+
+
+        //1 way to create array an array i.e []
+
+        let students = ["A", "B", "C"]; // elements / items / members // decelaration and initialization
+
+        console.log(students[0]);
+
+        // 2nd way to creating an array
+
+        let cars = new Array("Tata", 'Mahindra', `Maruti`); // new ClassName()
+
+        //arrayName[indexNumber]
+
+        //  window.alert(cars[0]);
+
+
+        // Resuse the code 
+
+        let x = document.querySelector('.myem');
+
+        // catch the element 
+        console.log(x);
+
+        x.innerHTML = cars[1];
+
+        // change the color
+
+        x.style.color = "red"
+
+
+
+        let friends = []; // declaraion
+
+        friends[0] = "Rahul"; // initialization
+        friends[1] = "Ankit";
+        friends[2] = "Rakesh";
+        friends[3] = 'Ram';
+
+        friends[3] = "Harish";
+
+
+        // display Js code 
+        console.log(friends[3]);
+
+
+        document.getElementById("h1").innerHTML = friends[3];
+
+        document.write('<h1>' + ' ' + friends + ' ' + '</h1>');
+
+
+
+
+        //5 news assignment for new format array
+
+
+        let newsNew = [{ 
+                        n1h1 : 'Is my liver made of iron\': Bhagwant Mann on allegations of \'drinking day and night',
+                         n1p1 :" Punjab chief minister Bhagwant Mann in a television interview addressed the allegations of alcoholism and said that for the past 12 years"
+
+                       },
+                       {  
+                        n2h2 : 'India vs Lebanon Live Score Intercontinental Cup Final 2023',
+                        n2p2 : "India face Lebanon in the Intercontinental Cup final, at the Kalinga Stadium in Bhubaneswar on Sunday. Considered to be the favourites"
+
+                         },
+                       {
+                        n3h3 : `Ashes 1st Test Day 3 Live Score: England lead by 33 runs, rain stops play`,
+                        n3p3 : " Ollie Robinson picked three wickets, while James Anderson and Stuart Broad accounted for a wicket each as England folded Australian first innings for "
+
+                          },
+                       {
+                        n4h4 : `Class 12th student stabbed to death by ‘friends’ over ₹1k dispute`,
+                        n4p4 : "According to police, the incident took place when a group of four friends were partying. The two accused in the case have already been taken into custody and further legal proceedings are underway."
+
+                         },
+                       {
+                        n5h5 : 'Ashes 1st Test Day 3 Live Score: England lead by 33 runs, rain stops play in Edgbaston',
+                        n5p5 : " Ollie Robinson picked three wickets, while James Anderson and Stuart Broad accounted for a wicket each as England folded Australian first innings for 386 "
+
+                         }
+                                       ]
+
+                                       
+        // news 1
+        document.write('<h1>'+newsNew[0].n1h1 +'</h1>')  ;
+        document.write('<p>'+newsNew[0].n1p1 +'</p>')  ;
+
+        // news 2
+
+        document.getElementById('news2').innerHTML = newsNew[1].n2h2;
+        document.querySelector('.news2').innerHTML = newsNew[1].n2p2;
+
+        // news 3
+
+        document.write('<h1>'+newsNew[2].n3h3 +'</h1>')  ;
+        document.write('<p>'+newsNew[2].n3p3 +'</p>')  ;
+        
+        // news 4
+
+        document.write('<h1>'+newsNew[3].n4h4 +'</h1>')  ;
+        document.write('<p>'+newsNew[3].n4p4 +'</p>')  ;
+
+         // news 5
+
+         document.write('<h1>'+newsNew[4].n5h5 +'</h1>')  ;
+        document.write('<p>'+newsNew[4].n5p5 +'</p>')  ;
+
+
+         //5 news assignment for old format array
+
+
+
+         let newsOld = new Array( 
+            { 
+                        n1h1 : 'Earthquake of magnitude 5.7 hits South of Tonga',
+                         n1p1 :" An earthquake of magnitude 5.7 struck the South of Tonga region on Sunday, the European Mediterranean Seismological Centre (EMSC) said."
+
+                       },
+                       {  
+                        n2h2 : 'RK Puram murder: Kejriwal slams Lt governor on law and order situation in Delhi',
+                        n2p2 : "Delhi chief minister Arvind Kejriwal alleged that the people in charge of maintaining law and order here are busy hatching conspiracies to take over the control of the Delhi government"
+
+                         },
+                       {
+                        n3h3 : `Habits that promote self-doubt`,
+                        n3p3 : " While self-doubt is a common human experience, certain habits can exacerbate or perpetuate these feelings."
+
+                          },
+                       {
+                        n4h4 : `Fix Manipur’s law and order`,
+                        n4p4 : "A sensitive state cannot be allowed to slip into cycles of violence and chaos. The authorities must focus on re-establishing the rule of law."
+
+                         },
+                       {
+                        n5h5 : 'Malavika’s Mumbaistan: Mumbai Kiski Hai?',
+                        n5p5 : " This week Mumbai, followed by Delhi has made it to the ‘Ten most unfriendly -to -non-natives city’s list, led by Accra in Ghana and Marrakech in Morocco."
+
+                         }
+         );
+
+
+         // news 1
+        document.write('<h1>'+newsOld[0].n1h1 +'</h1>')  ;
+        document.write('<p>'+newsOld[0].n1p1 +'</p>')  ;
+
+        // news 2
+
+        document.getElementById('news2').innerHTML = newsOld[1].n2h2;
+        document.querySelector('.news2').innerHTML = newsOld[1].n2p2;
+
+        // news 3
+
+        document.write('<h1>'+newsOld[2].n3h3 +'</h1>')  ;
+        document.write('<p>'+newsOld[2].n3p3 +'</p>')  ;
+        
+        // news 4
+
+        document.write('<h1>'+newsOld[3].n4h4 +'</h1>')  ;
+        document.write('<p>'+newsOld[3].n4p4 +'</p>')  ;
+
+         // news 5
+
+         document.write('<h1>'+newsOld[4].n5h5 +'</h1>')  ;
+        document.write('<p>'+newsOld[4].n5p5 +'</p>')  ;
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
